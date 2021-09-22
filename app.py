@@ -41,7 +41,7 @@ def handle_message(event):
     msg = event.message.text
     r = '很抱歉，你在說什麼？'
    
-    if msg == ['hi', 'Hi']:
+    if msg in ['hi', 'Hi']:
         r = '嗨'
     elif msg == '你吃飯了嗎':
         r = '還沒'
@@ -53,7 +53,9 @@ def handle_message(event):
         r = '我在休息中，晚一點再找我'
     elif '睡覺了嗎' in msg:
         r = '我已經睡覺了哦'
-        
+    elif msg in ['你幾歲了', '你幾歲了？', '你今年幾歲了', '你今年幾歲了？']:
+        r = '我今年17歲'
+
 
     line_bot_api.reply_message(
         event.reply_token,
