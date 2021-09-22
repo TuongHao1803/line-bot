@@ -49,6 +49,8 @@ def handle_message(event):
         r = '我是機器人'
     elif '訂位' in msg:
         r = '你想訂位，是嗎？'
+    elif '在幹嘛' in msg:
+        r = '我在休息中，晚一點再找我'
 
     line_bot_api.reply_message(
         event.reply_token,
