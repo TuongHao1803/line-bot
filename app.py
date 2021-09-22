@@ -46,11 +46,17 @@ def handle_message(event):
     elif msg == '你吃飯了嗎':
         r = '還沒'
     elif msg == '你是誰':
-        r = '我是機器人'
+        r = '我是施翔豪'
     elif '訂位' in msg:
         r = '你想訂位，是嗎？'
     elif '在幹嘛' in msg:
         r = '我在休息中，晚一點再找我'
+    elif '睡覺了嗎' in msg:
+        r = '我已經睡覺了哦'
+    elif msg == ['你幾歲了', '你幾歲了？']:
+        r = '我今年17歲'
+    elif msg == ['你在哪裡？', '你在哪裡', '你現在在哪裡', '你現在在哪裡？']:
+        r = '我現在在澳洲留學'
 
     line_bot_api.reply_message(
         event.reply_token,
