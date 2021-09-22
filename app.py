@@ -53,10 +53,10 @@ def handle_message(event):
         r = '我在休息中，晚一點再找我'
     elif '睡覺了嗎' in msg:
         r = '我已經睡覺了哦'
-    elif msg == ['你幾歲了', '你幾歲了？']:
-        r = '我今年17歲'
-    elif ['你在哪裡？', '你在哪裡', '你現在在哪裡', '你現在在哪裡？'] in msg:
-        r = '我現在在澳洲留學'
+        return
+
+if msg == ['你幾歲了', '你幾歲了？']:
+    r = '我今年17歲'
 
     line_bot_api.reply_message(
         event.reply_token,
