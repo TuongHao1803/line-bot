@@ -55,7 +55,7 @@ def handle_message(event):
         r = '我已經睡覺了哦'
     elif msg == ['你幾歲了', '你幾歲了？']:
         r = '我今年17歲'
-    elif msg == ['你在哪裡？', '你在哪裡', '你現在在哪裡', '你現在在哪裡？']:
+    elif ['你在哪裡？', '你在哪裡', '你現在在哪裡', '你現在在哪裡？'] in msg:
         r = '我現在在澳洲留學'
 
     line_bot_api.reply_message(
